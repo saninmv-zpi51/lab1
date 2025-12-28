@@ -22,11 +22,12 @@ body{
 .header__logo{
   display: flex;
   align-items: center;
-  margin-right: 64px;
+  margin-right: 24px;
+  height: 36px;              /* same as buttons */
 }
 
 .header__logo img{
-  height: 42px;          /* tweak if needed */
+  height: 100%;              /* inherit header__logo height */
   width: auto;
   display: block;
   object-fit: contain;
