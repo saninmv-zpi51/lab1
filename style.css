@@ -188,8 +188,178 @@
   0%,100% { opacity: 0.15; }
   50%     { opacity: 1.0; }
 }
-.glow{
+/* ===== Base ===== */
+*{ box-sizing: border-box; }
+
+:root{
+  --teal: #00595C;
+  --teal-dark: #032F30;
+  --border: #D9D9D9;
+  --pill: #F5F5F5;
+  --text: #1E1E1E;
+  --white: #ffffff;
+}
+
+body{
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.page{
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.header{
+  padding: 32px;
+  background: var(--teal);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill{
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.pill.is-active{
+  background: var(--pill);
+}
+
+.auth{
+  width: 178px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn{
+  flex: 1 1 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: 1px solid #767676;
+  background: #E3E3E3;
+  cursor: pointer;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 16px;
+}
+
+.btn--dark{
+  background: #2C2C2C;
+  border-color: #2C2C2C;
+  color: #fff;
+  padding: 12px 10px;
+  font-size: 12px;
+}
+
+/* ===== Hero ===== */
+.hero{
+  width: 1200px;
+  height: 630px;
+}
+
+.hero__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Museum bar (logos inside) ===== */
+.museum__bar{
+  width: 1200px;
+  height: 161px;
+  background: var(--teal-dark);
+  position: relative;
+}
+
+/* Place logos like your Figma positions */
+.museum__logo{
+  position: absolute;
+  object-fit: contain;
+  display: block;
+}
+
+.m1{ left: 39px;  top: 35px; width: 225.33px; height: 90.53px; }
+.m2{ left: 319px; top: 35px; width: 176.69px; height: 66.92px; }
+.m4{ left: 534px; top: 17px; width: 114px; height: 115px; }
+.m3{ left: 693px; top: 35px; width: 180px; height: 78px; }
+.m5{ left: 918px; top: 17px; width: 251px; height: 114px; }
+
+/* ===== Divider ===== */
+.divider{
+  width: 1200px;
+  height: 24px;
+  background: var(--border);
+}
+
+/* ===== Footer ===== */
+.footer{
+  padding: 32px 32px 160px;
+  background: var(--teal);
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__col{
+  width: 262px;
+  min-width: 240px;
+}
+
+.footer__title{
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+}
+
+.footer__text{
+  margin-top: 10px;
+  color: rgba(255,255,255,0.80);
+  font-size: 14px;
+}
+
+.socials{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.social{
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.80);
+  display: inline-block;
+}
+/* Museum-style subtle glow (no text blur) */
+.page img,
+.pill,
+.btn,
+.social{
   filter:
-    drop-shadow(0 0 6px rgb(0, 255, 191))
-    drop-shadow(0 0 18px rgb(0, 185, 161));
+    drop-shadow(0 0 6px rgba(255,255,255,0.18))
+    drop-shadow(0 0 20px rgba(255,255,255,0.10));
 }
