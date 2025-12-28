@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoPlay = setInterval(nextSlide, intervalTime);
 
     // reset timer on click
-    [prevBtn, nextBtn].forEach(btn => {
+    [prevBtn, nextBtn].forEach((btn) => {
       btn?.addEventListener("click", () => {
         clearInterval(autoPlay);
         autoPlay = setInterval(nextSlide, intervalTime);
@@ -56,47 +56,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const strip = document.querySelector("#museumStrip");
   if (!strip) return;
 
-  const logos = strip.querySelectorAll(".museum-strip__logo");
+  const logos = Array.from(strip.querySelectorAll(".museum-strip__logo"));
   if (logos.length === 0) return;
 
   const visible = 5; // show 5 logos
   let index = 0;
   let dir = 1;
+  let timer = null;
 
   function getStep() {
-    const first = strip.querySelector(".museum-strip__logo");
-    if (!first) return 0;
+    // Most reliable: measure distance between first two logos
+    const first = logos[0];
+    const second = logos[1];
 
-    const w = first.getBoundingClientRect().width;
+    if (first && second) {
+      const r1 = first.getBoundingClientRect();
+      const r2 = second.getBoundingClientRect();
+      const step = r2.left - r1.left; // includes gap
+      return Math.max(1, step);
+    }
 
-    // read gap from CSS
-    const style = getComputedStyle(strip);
-    const gap = parseFloat(style.gap) || 0;
+    // fallback: just width
+    if (first) {
+      return Math.max(1, first.getBoundingClientRect().width);
+    }
 
-    return w + gap;
+    return 1;
   }
 
-  function update() {
+  function updateMuseum() {
     const step = getStep();
     strip.style.transform = `translateX(-${index * step}px)`;
   }
 
-  function tick() {
+  function tickMuseum() {
     const maxIndex = Math.max(0, logos.length - visible);
 
     if (index >= maxIndex) dir = -1;
     if (index <= 0) dir = 1;
 
     index += dir;
-    update();
+    updateMuseum();
   }
 
-  // initial
-  update();
+  function startMuseum() {
+    updateMuseum();
+    if (timer) clearInterval(timer);
+    timer = setInterval(tickMuseum, 1500);
+  }
 
-  // run
-  setInterval(tick, 1500);
+  // Wait for images to layout (GitHub Pages sometimes needs this)
+  const decodePromises = logos
+    .map((img) => (img.decode ? img.decode().catch(() => null) : Promise.resolve(null)));
+
+  Promise.all(decodePromises).finally(() => {
+    setTimeout(startMuseum, 200);
+  });
 
   // keep correct after resize/zoom
-  window.addEventListener("resize", update);
+  window.addEventListener("resize", updateMuseum);
 });
