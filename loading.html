@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loading…</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="loading-page">
+  <main class="loading-wrap">
+
+    <section class="logo-stack" aria-label="Логотип">
+        <img class="logo-layer base" src="images/logo.png" alt="Логотип" />
+        <div class="logo-overlay" aria-hidden="false">
+            <img class="logo-layer anim a1" src="images/logo_animel1.png" alt="" />
+            <img class="logo-layer anim a2" src="images/logo_animel2.png" alt="" />
+        </div>
+    </section>
+
+
+    <section class="bar-stack" aria-label="Завантаження">
+      <!-- bottom -->
+      <img class="bar-layer base" src="images/loading_base.png" alt="" aria-hidden="true" />
+
+      <!-- moving part revealed L->R -->
+      <div class="bar-reveal" aria-hidden="true">
+        <img class="bar-layer moving" src="images/loading_movingpart.png" alt="" />
+      </div>
+
+      <!-- top frame -->
+      <img class="bar-layer frame" src="images/loading_frame.png" alt="" aria-hidden="true" />
+
+      <!-- Optional percent text (remove if you want) -->
+      <div class="bar-text" id="barText">0%</div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    startLayeredLoading({
+      durationMs: 125200,     // total load duration
+      to: "index.html",     // redirect target
+      easing: "easeOut"     // "linear" | "easeOut" | "easeInOut"
+    });
+  </script>
+</body>
+</html>
