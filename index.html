@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Exhibitum — Home</title>
 
-  <!-- ONE correct stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -27,40 +26,47 @@
       </div>
     </header>
 
-<section class="hero" aria-label="Банер">
-  <div class="carousel" id="carousel">
+    <!-- HERO CAROUSEL -->
+    <section class="hero" aria-label="Банер">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/af1.jpg" alt="Виставка 1">
+          <img src="images/af2.jpg" alt="Виставка 2">
+          <img src="images/af3.webp" alt="Виставка 3">
+          <img src="images/af4.jpg" alt="Виставка 4">
+          <img src="images/af6.jpg" alt="Виставка 5">
+          <img src="images/af7.webp" alt="Виставка 6">
+        </div>
 
-    <div class="carousel-track">
-      <img src="images/af1.jpg" alt="Виставка 1">
-      <img src="images/af2.jpg" alt="Виставка 2">
-      <img src="images/af3.webp" alt="Виставка 3">
-      <img src="images/af4.jpg" alt="Виставка 4">
-      <img src="images/af6.jpg" alt="Виставка 5">
-      <img src="images/af7.webp" alt="Виставка 6">
-    </div>
-
-    <button class="carousel-btn prev">‹</button>
-    <button class="carousel-btn next">›</button>
-
-  </div>
-</section>
-    <section class="museum" aria-label="Музеї">
-      <div class="museum__bar">
-        <img class="museum__logo m1" src="images/logo-museum-hanenkiv.png" alt="Музей Ханенків">
-        <img class="museum__logo m2" src="images/Muzey-loho.png" alt="Музей 2">
-        <img class="museum__logo m3" src="images/mist_identity.png" alt="Музей 3">
-        <img class="museum__logo m4" src="images/logo-ivan-honchar.webp" alt="Музей Івана Гончара">
-        <img class="museum__logo m5" src="images/m201824140.png" alt="Музей 5">
+        <button class="carousel-btn prev" type="button">‹</button>
+        <button class="carousel-btn next" type="button">›</button>
       </div>
     </section>
 
-    <!-- DIVIDER -->
+    <!-- MUSEUM STRIP CAROUSEL -->
+    <section class="museum" aria-label="Музеї">
+      <div class="museum__bar museum__bar--carousel">
+        <div class="museum-strip" id="museumStrip">
+          <img class="museum-strip__logo" src="images/logo-museum-hanenkiv.png" alt="Музей Ханенків">
+          <img class="museum-strip__logo" src="images/Muzey-loho.png" alt="Музей 2">
+          <img class="museum-strip__logo" src="images/logo-ivan-honchar.webp" alt="Музей Івана Гончара">
+          <img class="museum-strip__logo" src="images/mist_identity.png" alt="Музей 3">
+          <img class="museum-strip__logo" src="images/m201824140.png" alt="Музей 5">
+          <img class="museum-strip__logo" src="images/KNAG_IDENTITY_PRESENTATION-13.png" alt="KNAG">
+          <img class="museum-strip__logo" src="images/logo_black_2018.webp" alt="Logo Black 2018">
+          <img class="museum-strip__logo" src="images/National_Art_Museum_of_Ukraine_NAMU_logo_01.webp" alt="NAMU">
+          <img class="museum-strip__logo" src="images/PinchukArtCentre.png" alt="PinchukArtCentre">
+          <img class="museum-strip__logo" src="images/xlogo-small-text.png.pagespeed.ic.x3bYSoexxw.png" alt="X Logo">
+        </div>
+      </div>
+    </section>
+
     <div class="divider" aria-hidden="true"></div>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__col">
-        <div class="socials" aria-label="Соцмережі">
+        <div class="socials">
           <a class="social" href="#" aria-label="X"></a>
           <a class="social" href="#" aria-label="Instagram"></a>
           <a class="social" href="#" aria-label="YouTube"></a>
@@ -85,5 +91,8 @@
     </footer>
 
   </div>
+
+  <!-- IMPORTANT: JS -->
+  <script src="script.js"></script>
 </body>
 </html>
