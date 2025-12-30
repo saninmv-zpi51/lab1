@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exhibitum — Квитки</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="header__logo">
+      <img src="images/logo_text2.png" alt="Exhibitum">
+    </div>
+
+    <nav class="nav">
+      <a class="pill" href="index.html">Виставки</a>
+      <a class="pill is-active" href="tickets.html">Квитки</a>
+      <a class="pill" href="article.html">Статті</a>
+      <a class="pill" href="about.html">Про проєкт</a>
+      <a class="pill" href="contacts.html">Контакти</a>
+    </nav>
+
+    <div class="auth">
+      <button class="btn btn--light">Зайти</button>
+      <button class="btn btn--dark">Реєструватись</button>
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="tickets-hero">
+    <h1>Квитки на виставки</h1>
+    <p>Оберіть тип квитка та забронюйте відвідування музею онлайн</p>
+  </section>
+
+  <!-- TICKETS TABLE -->
+  <section class="tickets-section">
+    <h2>Типи квитків</h2>
+
+    <table class="tickets-table">
+      <thead>
+        <tr>
+          <th>Тип квитка</th>
+          <th>Опис</th>
+          <th>Ціна</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Стандартний</td>
+          <td>Вхід на одну виставку</td>
+          <td>150 грн</td>
+        </tr>
+        <tr>
+          <td>Студентський</td>
+          <td>За наявності студентського квитка</td>
+          <td>80 грн</td>
+        </tr>
+        <tr>
+          <td>Пільговий</td>
+          <td>Пенсіонери, діти</td>
+          <td>50 грн</td>
+        </tr>
+        <tr>
+          <td>Абонемент</td>
+          <td>Необмежені відвідування протягом місяця</td>
+          <td>500 грн</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="tickets-section">
+    <h2>Бронювання квитка</h2>
+
+    <form class="tickets-form">
+      <label>
+        Ім’я:
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email:
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Тип квитка:
+        <select name="ticket">
+          <option>Стандартний</option>
+          <option>Студентський</option>
+          <option>Пільговий</option>
+          <option>Абонемент</option>
+        </select>
+      </label>
+
+      <label>
+        Дата відвідування:
+        <input type="date" name="date">
+      </label>
+
+      <button class="btn btn--dark" type="submit">
+        Забронювати
+      </button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__col">
+      <div class="socials">
+        <a class="social"><img src="images/x.png" alt="X"></a>
+        <a class="social"><img src="images/instagram.png" alt="Instagram"></a>
+        <a class="social"><img src="images/youtube.png" alt="YouTube"></a>
+        <a class="social"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

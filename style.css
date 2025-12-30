@@ -500,5 +500,76 @@ body.about-page{
     background-color: #D9FEFF;
   }
 }
+/* =========================
+   TICKETS PAGE
+========================= */
+
+.tickets-hero{
+  background: #D9FEFF;
+  padding: 80px 64px;
+}
+
+.tickets-hero h1{
+  margin: 0;
+  font-size: 40px;
+}
+
+.tickets-hero p{
+  margin-top: 12px;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+.tickets-section{
+  padding: 64px;
+}
+
+.tickets-section h2{
+  margin-bottom: 24px;
+}
+
+/* TABLE */
+.tickets-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tickets-table th,
+.tickets-table td{
+  border: 1px solid #ccc;
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.tickets-table th{
+  background: #032F30;
+  color: #fff;
+}
+
+.tickets-table tr:nth-child(even){
+  background: #f4fefe;
+}
+
+/* FORM */
+.tickets-form{
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tickets-form label{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.tickets-form input,
+.tickets-form select{
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
 
 
