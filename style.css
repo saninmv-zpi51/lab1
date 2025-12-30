@@ -596,5 +596,255 @@ body.about-page{
   border-radius: 6px;
   border: 1px solid #999;
 }
+/* =========================
+   ARTICLE PAGE
+========================= */
+body.article-page{
+  background: #ffffff;
+}
+
+.visually-hidden{
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.articles{
+  padding: 48px 32px 64px;
+}
+
+.articles-top{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.articles-title{
+  margin: 0;
+  font-size: 34px;
+}
+
+.articles-controls{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.articles-search input{
+  width: 320px;
+  max-width: 70vw;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  outline: none;
+}
+
+.articles-search input:focus{
+  border-color: rgba(0, 89, 92, 0.65);
+}
+
+.articles-select select{
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  background: #fff;
+  outline: none;
+}
+
+/* Featured */
+.articles-featured{
+  margin: 18px 0 28px;
+}
+
+.featured-card{
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #d1fdf4;
+}
+
+.featured-media{
+  min-height: 240px;
+  background:
+    linear-gradient(135deg, rgba(0,89,92,0.22), rgba(3,47,48,0.18));
+}
+
+.featured-body{
+  padding: 18px 18px 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tag-row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag{
+  background: rgba(0,89,92,0.12);
+  border: 1px solid rgba(0,89,92,0.22);
+  color: #003e40;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.meta{
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.featured-title{
+  margin: 0;
+  font-size: 22px;
+}
+
+.featured-text{
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 62ch;
+}
+
+.featured-actions{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.link{
+  text-decoration: none;
+  color: #003e40;
+  opacity: 0.85;
+}
+
+.link:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Grid cards */
+.articles-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* ARTICLE CARDS – COLOR BLOCKS */
+.article-card{
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  min-height: 160px;
+  background: #D9FEFF; /* default fallback */
+}
+
+/* 1st, 4th, 7th... */
+.article-card:nth-child(3n + 1){
+  background: #D9FEFF;
+}
+
+/* 2nd, 5th, 8th... */
+.article-card:nth-child(3n + 2){
+  background: #dce7fc;
+}
+
+/* 3rd, 6th, 9th... */
+.article-card:nth-child(3n + 3){
+  background: #D9FFED;
+}
+
+
+.article-thumb{
+  background:
+    linear-gradient(135deg, rgba(0,89,92,0.18), rgba(3,47,48,0.16));
+}
+
+.article-body{
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.article-title{
+  margin: 0;
+  font-size: 18px;
+}
+
+.article-text{
+  margin: 0;
+  line-height: 1.55;
+  opacity: 0.82;
+}
+
+.article-link{
+  margin-top: auto;
+  text-decoration: none;
+  color: #003e40;
+  font-weight: 600;
+}
+
+.article-link:hover{
+  text-decoration: underline;
+}
+
+/* ornament strip like your about vibe (optional) */
+.articles-ornament{
+  margin-top: 36px;
+  width: 100%;
+  height: 72px;
+  background-color: #D9FEFF;
+  background-image: url("images/ornament.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.45;
+  animation: ornament-drift 40s linear infinite;
+}
+
+/* simple responsiveness */
+@media (max-width: 1240px){
+  .page{ width: 100%; }
+  .hero, .carousel{ width: 100%; }
+  .carousel-track img{ width: 100%; }
+}
+
+@media (max-width: 860px){
+  .featured-card{
+    grid-template-columns: 1fr;
+  }
+  .featured-body{
+    padding: 16px;
+  }
+  .articles-grid{
+    grid-template-columns: 1fr;
+  }
+  .article-card{
+    grid-template-columns: 1fr;
+  }
+  .article-thumb{
+    height: 180px;
+  }
+}
 
 
