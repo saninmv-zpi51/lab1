@@ -316,12 +316,12 @@ body.about-page{
   min-width: 0;
 }
 
-/* лого в "червоному квадраті" */
+
 .about-logo-box{
   width: 300px;
   height: 300px;
   background: #ffffff;
-  justify-self: end;     /* притиснути до правого краю своєї області */
+  justify-self: end;     
   align-self: center; 
 }
 .about__hero{
