@@ -12,9 +12,9 @@
 
     <!-- HEADER -->
     <header class="header">
-      <div class="header__logo">
+      <a class="header__logo" href="index.html" aria-label="Exhibitum — головна сторінка">
         <img src="images/logo_text2.png" alt="Exhibitum">
-      </div>
+      </a>
 
       <nav class="nav" aria-label="Навігація">
         <a class="pill" href="index.html">Виставки</a>
@@ -31,7 +31,7 @@
     </header>
 
     <!-- MAIN -->
-    <main class="about">
+    <main class="about" aria-label="Про проєкт">
       <div class="about-layout">
 
         <!-- LEFT: TEXT -->
@@ -53,43 +53,41 @@
             а також популяризація культурних інституцій серед широкої аудиторії.
           </p>
 
-          <h2>Опис бізнес-логіки</h2>
-          <p>
-            Бізнес-логіка веб-застосунку базується на агрегації інформації
-            від музейних установ та її поданні користувачу у вигляді
-            тематичних розділів. Основна сторінка демонструє актуальні
-            виставки, сторінка «Про проєкт» описує концепцію та партнерів,
-            а додаткові сторінки розширюють функціональність сервісу.
-          </p>
+          <div class="about-req-grid">
 
-          <h2>Функціональні вимоги</h2>
-          <ul>
-            <li>перегляд актуальних виставок;</li>
-            <li>навігація між розділами сайту;</li>
-            <li>відображення партнерських музеїв;</li>
-            <li>адаптивне відображення контенту.</li>
-          </ul>
+            <div class="about-req-text">
+                <h2>Функціональні вимоги</h2>
+                <ul>
+                <li>перегляд актуальних виставок;</li>
+                <li>навігація між розділами сайту;</li>
+                <li>відображення партнерських музеїв;</li>
+                <li>адаптивне відображення контенту.</li>
+                </ul>
 
-          <h2>Нефункціональні вимоги</h2>
-          <ul>
-            <li>зрозумілий та інтуїтивний інтерфейс;</li>
-            <li>швидке завантаження сторінок;</li>
-            <li>кросбраузерна сумісність;</li>
-            <li>відповідність принципам семантичної HTML-верстки.</li>
-          </ul>
+                <h2>Нефункціональні вимоги</h2>
+                <ul>
+                <li>зрозумілий та інтуїтивний інтерфейс;</li>
+                <li>швидке завантаження сторінок;</li>
+                <li>кросбраузерна сумісність;</li>
+                <li>відповідність принципам семантичної HTML-верстки.</li>
+                </ul>
+            </div>
+
+            <!-- ЛОГО ТЕПЕР СТОЇТЬ САМЕ В "ЧЕРВОНОМУ КВАДРАТІ" -->
+            <div class="about-logo-box" aria-label="Логотип Exhibitum">
+                <div class="about-logo-animated" aria-hidden="true"></div>
+            </div>
+
+            </div>
+
         </section>
 
-        <!-- RIGHT: (square + vertical panel) -->
-        <aside class="about-side">
+        <!-- RIGHT: SIDE COLUMN -->
+        <aside class="about-side" aria-label="Панель партнерів і логотип">
 
-          <!-- THIS IS YOUR RED SQUARE AREA -->
-          <div class="about-logo-box" aria-label="Логотип Exhibitum">
-            <div class="about-logo-animated"></div>
-          </div>
-
-          <!-- VERTICAL MUSEUM PANEL -->
-          <div class="museum-vertical" aria-label="Партнерські музеї">
-            <div class="museum-vertical__bg"></div>
+          <!-- VERTICAL MUSEUM PANEL (TOP) -->
+          <section class="museum-vertical" aria-label="Партнерські музеї">
+            <div class="museum-vertical__bg" aria-hidden="true"></div>
 
             <div class="museum-vertical__logos">
               <img src="images/logo-museum-hanenkiv.png" alt="Музей Ханенків">
@@ -101,7 +99,6 @@
               <img src="images/logo_black_2018.webp" alt="MFA">
               <img src="images/KNAG_IDENTITY_PRESENTATION-13.png" alt="KNAG">
             </div>
-          </div>
 
         </aside>
 
@@ -110,9 +107,10 @@
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__col">
-        <div class="socials">
+        <div class="socials" aria-label="Соцмережі">
           <a class="social" href="#" aria-label="X"></a>
           <a class="social" href="#" aria-label="Instagram"></a>
           <a class="social" href="#" aria-label="YouTube"></a>
