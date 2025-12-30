@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exhibitum — Статті</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="article-page">
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo">
+        <img src="images/logo_text2.png" alt="Exhibitum">
+      </div>
+
+      <nav class="nav" aria-label="Навігація">
+        <a class="pill" href="index.html">Виставки</a>
+        <a class="pill" href="about.html">Про проєкт</a>
+        <a class="pill" href="tickets.html">Квитки</a>
+        <a class="pill is-active" href="article.html">Статті</a>
+        <a class="pill" href="contacts.html">Контакти</a>
+      </nav>
+
+      <div class="auth">
+        <button class="btn btn--light" type="button">Зайти</button>
+        <button class="btn btn--dark" type="button">Реєструватись</button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="articles" aria-label="Статті">
+
+      <!-- TOP BAR -->
+      <section class="articles-top">
+        <h1 class="articles-title">Статті</h1>
+
+        <div class="articles-controls" aria-label="Пошук і фільтри">
+          <label class="articles-search">
+            <span class="visually-hidden">Пошук</span>
+            <input type="search" placeholder="Пошук по статтях…" />
+          </label>
+
+          <label class="articles-select">
+            <span class="visually-hidden">Категорія</span>
+            <select>
+              <option value="all">Усі категорії</option>
+              <option value="museums">Музеї</option>
+              <option value="exhibitions">Виставки</option>
+              <option value="history">Історія</option>
+              <option value="guides">Гіди</option>
+            </select>
+          </label>
+
+          <label class="articles-select">
+            <span class="visually-hidden">Сортування</span>
+            <select>
+              <option value="new">Спочатку нові</option>
+              <option value="popular">Популярні</option>
+              <option value="short">Короткі</option>
+              <option value="long">Довгі</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <!-- FEATURED -->
+      <section class="articles-featured" aria-label="Рекомендована стаття">
+        <article class="featured-card">
+          <div class="featured-media" role="img" aria-label="Фото для рекомендованої статті"></div>
+
+          <div class="featured-body">
+            <div class="tag-row">
+              <span class="tag">Рекомендовано</span>
+              <span class="meta">8 хв • 2025</span>
+            </div>
+
+            <h2 class="featured-title">Як читати музейну експозицію: 7 простих підказок</h2>
+
+            <p class="featured-text">
+              Короткий гід, який допомагає “бачити” в експозиції більше: від композиції залу й підписів
+              до маршрутів, світла та контексту.
+            </p>
+
+            <div class="featured-actions">
+              <a class="btn btn--light" href="#">Читати</a>
+              <a class="link" href="#">Зберегти</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- GRID -->
+      <section class="articles-grid" aria-label="Список статей">
+
+        <article class="article-card">
+          <div class="article-thumb" role="img" aria-label="Обкладинка статті 1"></div>
+          <div class="article-body">
+            <div class="tag-row">
+              <span class="tag">Музеї</span>
+              <span class="meta">5 хв</span>
+            </div>
+            <h3 class="article-title">Музей Ханенків: що подивитися за 60 хвилин</h3>
+            <p class="article-text">Маршрут “must-see”, якщо часу мало: зал за залом, без поспіху.</p>
+            <a class="article-link" href="#">Відкрити →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-thumb" role="img" aria-label="Обкладинка статті 2"></div>
+          <div class="article-body">
+            <div class="tag-row">
+              <span class="tag">Виставки</span>
+              <span class="meta">7 хв</span>
+            </div>
+            <h3 class="article-title">Як обирати виставки: чек-лист перед походом</h3>
+            <p class="article-text">Тема, кураторський текст, формат, квитки — що перевірити завчасно.</p>
+            <a class="article-link" href="#">Відкрити →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-thumb" role="img" aria-label="Обкладинка статті 3"></div>
+          <div class="article-body">
+            <div class="tag-row">
+              <span class="tag">Гіди</span>
+              <span class="meta">4 хв</span>
+            </div>
+            <h3 class="article-title">Етикет у музеї: коротко і без занудства</h3>
+            <p class="article-text">Фото, звук, дистанція, нотатки — як почуватися впевнено.</p>
+            <a class="article-link" href="#">Відкрити →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-thumb" role="img" aria-label="Обкладинка статті 4"></div>
+          <div class="article-body">
+            <div class="tag-row">
+              <span class="tag">Історія</span>
+              <span class="meta">9 хв</span>
+            </div>
+            <h3 class="article-title">Київські музеї: як формувались колекції</h3>
+            <p class="article-text">Трохи контексту: звідки з’являються експонати і як вони живуть у часі.</p>
+            <a class="article-link" href="#">Відкрити →</a>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- FOOTER ORNAMENT (optional vibe) -->
+      <div class="articles-ornament" aria-hidden="true"></div>
+
+    </main>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__col">
+        <div class="socials">
+          <a class="social" href="#" aria-label="X"></a>
+          <a class="social" href="#" aria-label="Instagram"></a>
+          <a class="social" href="#" aria-label="YouTube"></a>
+          <a class="social" href="#" aria-label="LinkedIn"></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Музеї</div>
+        <div class="footer__text">Партнерські культурні установи.</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Контакти</div>
+        <div class="footer__text">email@example.com</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Події</div>
+        <div class="footer__text">Анонси та виставки.</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
