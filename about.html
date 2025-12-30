@@ -9,98 +9,138 @@
 </head>
 
 <body>
+    <body class="about-page">
   <div class="page">
 
     <!-- HEADER -->
     <header class="header">
 
+      <!-- LOGO -->
       <div class="header__logo">
         <img src="images/logo_text2.png" alt="Exhibitum">
       </div>
 
+      <!-- NAV -->
       <nav class="nav" aria-label="Навігація">
         <a class="pill" href="index.html">Виставки</a>
-        <a class="pill" href="tickets.html">Квитки</a>
-        <a class="pill" href="articles.html">Статті</a>
         <a class="pill is-active" href="about.html">Про проєкт</a>
+        <a class="pill" href="tickets.html">Квитки</a>
+        <a class="pill" href="article.html">Статті</a>
         <a class="pill" href="contacts.html">Контакти</a>
       </nav>
 
+      <!-- AUTH -->
       <div class="auth">
-        <button class="btn btn--light">Зайти</button>
-        <button class="btn btn--dark">Реєструватись</button>
+        <button class="btn btn--light" type="button">Зайти</button>
+        <button class="btn btn--dark" type="button">Реєструватись</button>
       </div>
 
     </header>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <main class="about">
 
-      <section class="about__hero">
-        <h1>WEB-застосунок «Exhibitum»</h1>
-        <p>
-          Exhibitum — інформаційний веб-застосунок для ознайомлення
-          з музейними виставками, культурними подіями та мистецькими ініціативами.
-        </p>
-      </section>
+      <div class="about-layout">
 
-      <section class="about__block">
-        <h2>Предметна галузь</h2>
-        <p>
-          Предметною галуззю даного WEB-застосунку є сфера культурних та музейних
-          інформаційних сервісів, що надають користувачам доступ до актуальної
-          інформації про виставки, музеї та мистецькі події.
-        </p>
-      </section>
+        <!-- =========================
+             LEFT: TEXT CONTENT
+        ========================== -->
+        <section class="about-content">
 
-      <section class="about__block">
-        <h2>Мета створення WEB-застосунку</h2>
-        <p>
-          Метою створення WEB-застосунку є розробка зручного та інтуїтивно
-          зрозумілого інтерфейсу для перегляду виставок і отримання інформації
-          про культурні події.
-        </p>
-      </section>
+          <h1>Про веб-застосунок «Exhibitum»</h1>
 
-      <section class="about__block">
-        <h2>Бізнес-логіка</h2>
-        <ul>
-          <li>Перегляд списку виставок та подій</li>
-          <li>Ознайомлення з деталями виставок</li>
-          <li>Перехід до сторінки придбання квитків</li>
-          <li>Отримання інформації про музеї</li>
-        </ul>
-      </section>
+          <h2>Предметна галузь</h2>
+          <p>
+            Веб-застосунок <strong>Exhibitum</strong> належить до предметної галузі
+            культурних та мистецьких інформаційних систем і призначений для
+            ознайомлення користувачів з актуальними музейними виставками,
+            подіями та освітніми ініціативами.
+          </p>
 
-      <section class="about__grid">
-        <div class="about__card">
-          <h3>Функціональні вимоги</h3>
-          <ol>
-            <li>Відображення виставок</li>
-            <li>Навігація між сторінками</li>
-            <li>Підтримка мультимедійного контенту</li>
-          </ol>
-        </div>
+          <h2>Мета створення</h2>
+          <p>
+            Метою створення веб-застосунку є надання зручного, візуально приємного
+            та структурованого доступу до інформації про виставки музеїв України,
+            а також популяризація культурних інституцій серед широкої аудиторії.
+          </p>
 
-        <div class="about__card">
-          <h3>Нефункціональні вимоги</h3>
+          <h2>Опис бізнес-логіки</h2>
+          <p>
+            Бізнес-логіка веб-застосунку базується на агрегації інформації
+            від музейних установ та її поданні користувачу у вигляді
+            тематичних розділів. Основна сторінка демонструє актуальні
+            виставки, сторінка «Про проєкт» описує концепцію та партнерів,
+            а додаткові сторінки розширюють функціональність сервісу.
+          </p>
+
+          <h2>Функціональні вимоги</h2>
           <ul>
-            <li>Зручність користування</li>
-            <li>Швидке завантаження сторінок</li>
-            <li>Сумісність з сучасними браузерами</li>
+            <li>перегляд актуальних виставок;</li>
+            <li>навігація між розділами сайту;</li>
+            <li>відображення партнерських музеїв;</li>
+            <li>адаптивне відображення контенту.</li>
           </ul>
-        </div>
-      </section>
 
+          <h2>Нефункціональні вимоги</h2>
+          <ul>
+            <li>зрозумілий та інтуїтивний інтерфейс;</li>
+            <li>швидке завантаження сторінок;</li>
+            <li>кросбраузерна сумісність;</li>
+            <li>відповідність принципам семантичної HTML-верстки.</li>
+          </ul>
+
+        </section>
+
+        <!-- =========================
+             RIGHT: VERTICAL MUSEUM PANEL
+        ========================== -->
+        <aside class="museum-vertical" aria-label="Партнерські музеї">
+
+          <div class="museum-vertical__bg"></div>
+
+          <div class="museum-vertical__logos">
+            <img src="images/logo-museum-hanenkiv.png" alt="Музей Ханенків">
+            <img src="images/Muzey-loho.png" alt="Музей історії">
+            <img src="images/logo-ivan-honchar.webp" alt="Музей Івана Гончара">
+            <img src="images/mist_identity.png" alt="MIST">
+            <img src="images/PinchukArtCentre.png" alt="PinchukArtCentre">
+            <img src="images/National_Art_Museum_of_Ukraine_NAMU_logo_01.webp" alt="NAMU">
+            <img src="images/logo_black_2018.webp" alt="MFA">
+            <img src="images/KNAG_IDENTITY_PRESENTATION-13.png" alt="KNAG">
+          </div>
+
+        </aside>
+
+      </div>
     </main>
+
+    <!-- DIVIDER -->
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__col">
-        <div class="footer__title">Exhibitum</div>
-        <div class="footer__text">
-          Інформаційний сервіс музейних подій
+        <div class="socials">
+          <a class="social" href="#" aria-label="X"></a>
+          <a class="social" href="#" aria-label="Instagram"></a>
+          <a class="social" href="#" aria-label="YouTube"></a>
+          <a class="social" href="#" aria-label="LinkedIn"></a>
         </div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Музеї</div>
+        <div class="footer__text">Партнерські культурні установи.</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Контакти</div>
+        <div class="footer__text">email@example.com</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Події</div>
+        <div class="footer__text">Анонси та виставки.</div>
       </div>
     </footer>
 
