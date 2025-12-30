@@ -290,6 +290,46 @@ body{
 /* =========================
    ABOUT PAGE
 ========================= */
+.about-logo-box{
+  width: 300px;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto; /* щоб було справа, як на макеті */
+}
+.about-logo-animated{
+  width: 100%;
+  height: 100%;
+
+  background-color: #D9FEFF;
+
+  -webkit-mask-image: url("images/logo.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("images/logo.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  animation: logo-color-shift 6s ease-in-out infinite;
+}
+@keyframes logo-color-shift{
+  0%{
+    background-color: #D9FEFF;
+  }
+  50%{
+    background-color: #032F30;
+  }
+  100%{
+    background-color: #D9FEFF;
+  }
+}
+
 body.about-page{
   background: #ffffff;
 }
