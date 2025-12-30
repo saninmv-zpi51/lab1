@@ -404,12 +404,14 @@ body.about-page{
 
   background-image: url("images/ornament.png");
   background-repeat: repeat-x;
-  background-position: top center;
+  background-position: center;
   background-size: contain;
 
   opacity: 0.5;
 
   margin-bottom: 0;
+
+  animation: ornament-drift 40s linear infinite;
 }
 
 /* ORNAMENT BOTTOM */
@@ -421,12 +423,23 @@ body.about-page{
 
   background-image: url("images/ornament.png");
   background-repeat: repeat-x;
-  background-position: bottom center;
+  background-position: center;
   background-size: contain;
 
   opacity: 0.5;
 
   margin-top: 0;
+
+  animation: ornament-drift 40s linear infinite;
+}
+
+@keyframes ornament-drift{
+  from{
+    background-position-x: 0;
+  }
+  to{
+    background-position-x: 1000px;
+  }
 }
 
 
