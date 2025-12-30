@@ -290,40 +290,6 @@ body{
 /* =========================
    ABOUT PAGE
 ========================= */
-.about-logo-box{
-  width: 300px;
-  height: 300px;
-  background: #ffffff;
-}
-
-.about-logo-animated{
-  width: 100%;
-  height: 100%;
-  background-color: #032F30;
-
-  -webkit-mask-image: url("images/logo.png");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: left;
-  -webkit-mask-size: contain;
-
-  mask-image: url("images/logo.png");
-  mask-repeat: no-repeat;
-  mask-position: left;
-  mask-size: contain;
-
-  animation: logo-color-shift 6s ease-in-out infinite;
-}
-@keyframes logo-color-shift{
-  0%{
-    background-color: #D9FEFF;
-  }
-  50%{
-    background-color: #032F30;
-  }
-  100%{
-    background-color: #D9FEFF;
-  }
-}
 
 
 body.about-page{
@@ -488,6 +454,50 @@ body.about-page{
   }
   to{
     background-position-x: 1000px;
+  }
+}
+/* RIGHT COLUMN: safe container */
+.about-side{
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.about-logo-box{
+  width: 300px;
+  height: 300px;
+  margin-bottom: auto;   
+  background: #ffffff;
+}
+.about-logo-animated{
+  width: 100%;
+  height: 100%;
+  background-color: #032F30;
+
+  -webkit-mask-image: url("images/logo.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("images/logo.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  animation: logo-color-shift 6s ease-in-out infinite;
+}
+@keyframes logo-color-shift{
+  0%{
+    background-color: #D9FEFF;
+  }
+  50%{
+    background-color: #032F30;
+  }
+  100%{
+    background-color: #D9FEFF;
   }
 }
 

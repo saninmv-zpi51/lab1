@@ -4,23 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Exhibitum — Про проєкт</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-    <body class="about-page">
+<body class="about-page">
   <div class="page">
 
     <!-- HEADER -->
     <header class="header">
-
-      <!-- LOGO -->
       <div class="header__logo">
         <img src="images/logo_text2.png" alt="Exhibitum">
       </div>
 
-      <!-- NAV -->
       <nav class="nav" aria-label="Навігація">
         <a class="pill" href="index.html">Виставки</a>
         <a class="pill is-active" href="about.html">Про проєкт</a>
@@ -29,24 +24,18 @@
         <a class="pill" href="contacts.html">Контакти</a>
       </nav>
 
-      <!-- AUTH -->
       <div class="auth">
         <button class="btn btn--light" type="button">Зайти</button>
         <button class="btn btn--dark" type="button">Реєструватись</button>
       </div>
-
     </header>
 
     <!-- MAIN -->
     <main class="about">
-
       <div class="about-layout">
 
-        <!-- =========================
-             LEFT: TEXT CONTENT
-        ========================== -->
+        <!-- LEFT: TEXT -->
         <section class="about-content">
-
           <h1>Про веб-застосунок «Exhibitum»</h1>
 
           <h2>Предметна галузь</h2>
@@ -72,7 +61,6 @@
             виставки, сторінка «Про проєкт» описує концепцію та партнерів,
             а додаткові сторінки розширюють функціональність сервісу.
           </p>
-        
 
           <h2>Функціональні вимоги</h2>
           <ul>
@@ -89,38 +77,39 @@
             <li>кросбраузерна сумісність;</li>
             <li>відповідність принципам семантичної HTML-верстки.</li>
           </ul>
-        <div class="about-logo-box">
-            <div class="about-logo-animated"></div>
         </section>
 
-        <!-- =========================
-             RIGHT: VERTICAL MUSEUM PANEL
-        ========================== -->
-        <aside class="museum-vertical" aria-label="Партнерські музеї">
+        <!-- RIGHT: (square + vertical panel) -->
+        <aside class="about-side">
 
-          <div class="museum-vertical__bg"></div>
+          <!-- THIS IS YOUR RED SQUARE AREA -->
+          <div class="about-logo-box" aria-label="Логотип Exhibitum">
+            <div class="about-logo-animated"></div>
+          </div>
 
-          <div class="museum-vertical__logos">
-            <img src="images/logo-museum-hanenkiv.png" alt="Музей Ханенків">
-            <img src="images/Muzey-loho.png" alt="Музей історії">
-            <img src="images/logo-ivan-honchar.webp" alt="Музей Івана Гончара">
-            <img src="images/mist_identity.png" alt="MIST">
-            <img src="images/PinchukArtCentre.png" alt="PinchukArtCentre">
-            <img src="images/National_Art_Museum_of_Ukraine_NAMU_logo_01.webp" alt="NAMU">
-            <img src="images/logo_black_2018.webp" alt="MFA">
-            <img src="images/KNAG_IDENTITY_PRESENTATION-13.png" alt="KNAG">
+          <!-- VERTICAL MUSEUM PANEL -->
+          <div class="museum-vertical" aria-label="Партнерські музеї">
+            <div class="museum-vertical__bg"></div>
+
+            <div class="museum-vertical__logos">
+              <img src="images/logo-museum-hanenkiv.png" alt="Музей Ханенків">
+              <img src="images/Muzey-loho.png" alt="Музей історії">
+              <img src="images/logo-ivan-honchar.webp" alt="Музей Івана Гончара">
+              <img src="images/mist_identity.png" alt="MIST">
+              <img src="images/PinchukArtCentre.png" alt="PinchukArtCentre">
+              <img src="images/National_Art_Museum_of_Ukraine_NAMU_logo_01.webp" alt="NAMU">
+              <img src="images/logo_black_2018.webp" alt="MFA">
+              <img src="images/KNAG_IDENTITY_PRESENTATION-13.png" alt="KNAG">
+            </div>
           </div>
 
         </aside>
 
       </div>
-      
     </main>
 
-    <!-- DIVIDER -->
     <div class="divider" aria-hidden="true"></div>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__col">
         <div class="socials">
